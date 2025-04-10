@@ -76,4 +76,10 @@ conn = st.connection("gsheets", type = GSheetsConnection)
 df = conn.read()
 st.dataframe(df)
 
+import os
+
+myCWD = os.getcwd()
+csv_file_path = os.path.join(myCWD,"my_data.csv")
+df.to_csv(csv_file_path, index=False)
+
 

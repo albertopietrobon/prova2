@@ -71,6 +71,8 @@ password = os.environ["password"]
 st.write(password)
 """
 
+
+#import data and save them
 from streamlit_gsheets import GSheetsConnection
 conn = st.connection("gsheets", type = GSheetsConnection)
 df = conn.read()
@@ -83,3 +85,14 @@ csv_file_path = os.path.join(myCWD,"my_data.csv")
 df.to_csv(csv_file_path, index=False)
 
 
+#other elements are: images,videos, logos
+
+#iframe
+st.title(":red[Iframe]")
+import streamlit.components.v1 as components
+
+components.iframe("https://www.fantacalcio.it/", height=600, scrolling=True)
+
+#HTML components
+st.title(":red[HTML]") #we can put HTML components but they are not interactive
+#what I can do is to use right after my element the st.markdown()

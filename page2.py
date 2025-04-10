@@ -62,8 +62,12 @@ with st.expander("Data Viz close", expanded=False):
 #secrets
 st.title(":red[Secret info]")
 
-username = st.secrets("username")
+username = st.secrets["username"]
 st.write(username)
+
+import os 
+password = os.environ["password"]
+st.write(password)
 
 
 

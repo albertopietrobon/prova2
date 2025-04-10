@@ -70,4 +70,9 @@ password = os.environ["password"]
 st.write(password)
 
 
+from streamlit_gsheets import GSheetsConnection
+conn = st.connection("gsheets", type = GSheetsConnection)
+df = conn.read()
+st.dataframe(df)
+
 

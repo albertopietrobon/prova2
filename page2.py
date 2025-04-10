@@ -59,3 +59,6 @@ with st.expander("Data Viz close", expanded=False):
     st.subheader("My data")
     st.area_chart(data)
 
+
+
+

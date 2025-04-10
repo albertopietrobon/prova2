@@ -60,6 +60,7 @@ with st.expander("Data Viz close", expanded=False):
     st.area_chart(data)
 
 #secrets
+"""
 st.title(":red[Secret info]")
 
 username = st.secrets["username"]
@@ -68,7 +69,7 @@ st.write(username)
 import os 
 password = os.environ["password"]
 st.write(password)
-
+"""
 
 from streamlit_gsheets import GSheetsConnection
 conn = st.connection("gsheets", type = GSheetsConnection)

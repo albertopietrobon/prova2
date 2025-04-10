@@ -59,6 +59,11 @@ with st.expander("Data Viz close", expanded=False):
     st.subheader("My data")
     st.area_chart(data)
 
+#secrets
+st.title(":red[Secret info]")
+
+username = st.secrets("username")
+st.write(username)
 
 
 

@@ -76,3 +76,29 @@ location = {
 
 df3 = pd.DataFrame(location)
 st.map(df3)
+
+#session state
+st.title(":red[Session state]")
+
+st.session_state["Player"]="Diego"
+st.session_state["Goals"]=44
+
+st.write("The name is", st.session_state["Player"])
+
+#messages
+st.title(":red[Messages]")
+
+st.error("error")
+st.warning("warning")
+st.success("success")
+st.info("info")
+
+#progress bar
+import time as t
+
+st.title(":red[Progress bar")
+
+progress=st.progress(0)
+for i in range(101):
+    t.sleep(0.05)
+    progress=st.progress(i)
